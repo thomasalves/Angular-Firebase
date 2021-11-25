@@ -1,0 +1,43 @@
+<div class="card ">
+  <div class="card-header">
+    <h2>Novo Cliente:</h2>
+  </div>
+  <div class="card-body">
+    <form class="form">
+      <div class="row">
+        <div class="col-sm-4">
+          <label for="nome">Nome:</label>
+            <div class="input-group mt-3 mb-3">
+              <input matInput   [(ngModel)]= "cliente.name" class="form-control"  name="nome" placeholder="Nome do Produto">
+            </div>
+        </div>
+        <div class="col-sm-4 form-group">
+          <label for="valor">CPF:</label>
+            <div class="input-group mt-3 mb-3">
+              <input type="number" class="form-control" [(ngModel)]= "cliente.cpf" placeholder="CPF:" name="cpf" >
+            </div>
+        </div>
+        <div class="col-sm-4 form-group">
+          <label for="valor">Data nascimento:</label>
+            <div class="input-group mt-3 mb-3">
+              <input type="date" class="form-control" [(ngModel)]= "cliente.dataNascimento" placeholder="data de nascimento:" name="dataNascimento" >
+            </div>
+        </div>
+      </div>
+      <div class="row form-gorup">
+        <div class="col-sm-4 ">
+            <label for="email">E-mail:</label>
+             <input class="form-control"  type="text" [(ngModel)]= "cliente.email" name="email" >
+        </div>
+        <div class="col-sm-8">
+            <label for="endereco">Endereço:</label>
+            <input class="form-control"  type="text" [(ngModel)]= "cliente.endereco" name="endereco" >
+
+        </div>
+      </div>
+    </form>
+    <button type="button" class="btn btn-success"  (click)="onSubmit()" >
+      Salvar
+    </button>
+  </div>
+</div>

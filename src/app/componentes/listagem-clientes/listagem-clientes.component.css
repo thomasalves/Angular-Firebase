@@ -1,0 +1,11 @@
+.card {
+  display: flex;
+}
+
+button {
+  margin: 5px;
+}
+
+.example-card:hover {
+  padding: 20px;
+}

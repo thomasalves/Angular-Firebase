@@ -1,0 +1,31 @@
+<div class="card  mt-5">
+  <div class="card-body">
+    <h2 class="card-title">Tabela de Clientes</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">CPF</th>
+          <th scope="col">Data de nascimento</th>
+          <th scope="col">E- mail</th>
+          <th scope="col">Endereco</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let cliente of clientes | async">
+        <tr>
+          <td>{{cliente.name}}</td>
+          <td>{{cliente.cpf}}</td>
+          <td>{{cliente.dataNascimento}}</td>
+          <td>{{cliente.email}}</td>
+          <td>{{cliente.endereco}}</td>
+
+          <td>
+            <button type="button"  class="btn btn-primary" (click)="edit(cliente, cliente.key)">Editar</button>
+            <button type="button" class="btn btn-danger" (click)="delete(cliente.key)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

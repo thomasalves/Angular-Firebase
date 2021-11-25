@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "backend-wk-tecnnology": {
+      "hosting": {
+        "testeWk": [
+          "backend-wk-tecnnology"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "backend-wk-tecnnology"
+  }
+}

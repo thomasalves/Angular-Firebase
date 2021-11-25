@@ -1,0 +1,67 @@
+
+<div class="card ">
+  <div class="card-header">
+    <h2>Nova Venda:</h2>
+  </div>
+  <div class="card-body">
+    <form class="form">
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="cliente">Cliente:</label>
+          <select class="form-control mt-3 mb-3" id="clientes"  [(ngModel)]= "venda.idCliente" [ngModelOptions]="{standalone: true}" >
+            <option *ngFor="let cliente of clientes | async"  [value]="cliente.id">{{cliente.name}}</option>
+          </select>
+        </div>
+        <div class="col-sm-6">
+          <label for="cliente">Produto:</label>
+          <select class="form-control mt-3 mb-3" id="clientes" [(ngModel)]= "venda.idProdutos" [ngModelOptions]="{standalone: true}" >
+            <option  *ngFor="let produto of produtos | async" value="{{produto.id}}">{{produto.nome}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="valor">Data:</label>
+          <div class="input-group mt-3 mb-3">
+            <input [(ngModel)]= "venda.Data" [ngModelOptions]="{standalone: true}" type="date" class="form-control" placeholder="data de Venda" name="data" >
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <label for="valor">Valor:</label>
+              <div class="input-group mt-3 mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">R$</span>
+                </div>
+                <input [(ngModel)]= "venda.total" [ngModelOptions]="{standalone: true}" type="number" class="form-control" placeholder="valor:" name="valor" >
+              </div>
+        </div>
+      </div>
+        <!-- <div class="col-sm-4 form-group">
+          <label for="valor">CPF:</label>
+            <div class="input-group mt-3 mb-3">
+              <input type="number" class="form-control" [(ngModel)]= "cliente.cpf" placeholder="CPF:" name="cpf" >
+            </div>
+        </div>
+        <div class="col-sm-4 form-group">
+          <label for="valor">Data nascimento:</label>
+            <div class="input-group mt-3 mb-3">
+              <input type="date" class="form-control" [(ngModel)]= "cliente.dataNascimento" placeholder="data de nascimento:" name="dataNascimento" >
+            </div>
+        </div>
+      </div>
+      <div class="row form-gorup">
+        <div class="col-sm-4 ">
+            <label for="email">E-mail:</label>
+             <input class="form-control"  type="text" [(ngModel)]= "cliente.email" name="email" >
+        </div>
+        <div class="col-sm-8">
+            <label for="endereco">Endereço:</label>
+            <input class="form-control"  type="text" [(ngModel)]= "cliente.endereco" name="endereco" >
+
+        </div> -->
+    </form>
+    <button type="button" class="btn btn-success " (click)="onSubmit()" >
+      Salvar
+    </button>
+  </div>
+</div>

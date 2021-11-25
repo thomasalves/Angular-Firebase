@@ -1,0 +1,29 @@
+<div class="card mt-5">
+  <div class="card-header">
+    <h2>Novo Produto:</h2>
+  </div>
+  <div class="card-body">
+    <form class="form">
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="nome">Nome:</label>
+            <div class="input-group mt-3 mb-3">
+              <input matInput   [(ngModel)]= "produto.nome" class="form-control"  name="nome" placeholder="Nome do Produto">
+            </div>
+        </div>
+        <div class="col-sm-6 form-group">
+          <label for="valor">Valor:</label>
+            <div class="input-group mt-3 mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">R$</span>
+              </div>
+              <input type="number" class="form-control" [(ngModel)]= "produto.valor" placeholder="Valor:" name="valor" >
+            </div>
+        </div>
+      </div>
+    </form>
+    <button type="button" class="btn btn-success"  (click)="onSubmit()" >
+      Salvar
+    </button>
+  </div>
+</div>
